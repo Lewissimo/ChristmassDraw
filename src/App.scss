@@ -15,10 +15,10 @@
     background-color: #020910e8;
     border-radius: 125px;
     transition: 2s;
-    &:hover{
+    // &:hover{
       width: 80%;
       height: 80vh;
-    }
+    // }
 
     display: flex;
     justify-content: center;
@@ -50,6 +50,22 @@
         position: absolute;
         bottom: 30px;
       }
+    }
+  }
+
+
+
+  // home
+
+  .homeContent{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 80%;
+    >*{
+      background-color: blue;
+      border: 2px solid black;
+      width: 30%;
     }
   }
 
