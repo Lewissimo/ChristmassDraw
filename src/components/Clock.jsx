@@ -4,7 +4,8 @@ const Clock = () => {
     const lateDays = 42;
   return (
     <div className='dayZeroContent'>
-      Do wigilii zostały: <span>{lateDays}</span> dni
+      <span>Dni do wigilii</span>
+      <span>{lateDays}</span>
     </div>
   )
 }

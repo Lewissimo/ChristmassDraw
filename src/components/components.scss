@@ -1,63 +1,349 @@
+
+@font-face {
+    font-family: 'elegant'; // Nadaj nazwę fontowi
+    src: url('../assets/Libre-Bodoni-master/fonts/OTF/LibreBodoni-Bold.otf') format('opentype'); // Określ ścieżkę do pliku fontu
+  }
+
+
+
 // yourPerson
 
 .mainBoard{
+    font-family: elegant;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
+
     .dayZeroContent{
         font-size: 2vw;
         font-weight: bold;
         flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
     }
 
 
     .yourPerson{
         flex: 3;
-        perspective: 1000px;
-
         img{
             width: 170px;
             height: 170px;
             border-radius: 50%;
         }
-        &:hover{
-            .card{
-                transform: rotateY( 180deg);
-            }
-        }
-        .card{
-            position: relative;
-            transform-style: preserve-3d;
-            transition: transform 0.5s;
-            width: 150px;
-            height: 200px;
+        
+
+
+        .cardContainer{
+            cursor: pointer;
+
+            width: 210px;
+            perspective: 1000px;
+
+            height: 260px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             &:hover{
-                transform: rotateY(180deg);
+                .card{
+                    transform: rotateY( 180deg);
+                }
             }
 
-            >*{
-                // backface-visibility: hidden;
-                position: absolute;
-                width: 100%;
-                height: 100%;
-            }
-            .front{
-                transform: rotateY(180deg);
-
-            }
-
-            .back{
+            .card{
+                position: relative;
+                transform-style: preserve-3d;
+                transition: transform 0.5s;
+                width: 150px;
+                height: 200px;
                 display: flex;
-                flex-direction: column;
-                justify-content: center;
                 align-items: center;
-                font-size: 1.4em;
-                padding: 25px;
-                border-radius: 15px;
-
-
+                justify-content: center;
+      
+    
+                >*{
+                    backface-visibility: hidden;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    background-color: black;
+                }
+                .front{
+                    transform: rotateY(180deg);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.4em;
+                    padding: 25px;
+                    border-radius: 15px;
+                    
+    
+                }
+    
+                .back{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.4em;
+                    padding: 25px;
+                    border-radius: 15px;
+    
+    
+                }
             }
         }
+    }
+}
+
+@font-face {
+    font-family: 'handwriten'; // Nadaj nazwę fontowi
+    src: url('../assets/great-vibes/GreatVibes-Regular.ttf') format('opentype'); // Określ ścieżkę do pliku fontu
+  }
+  .santaListCreator{
+
+
+    .writeListButton{
+        font-family: handwriten;
+
+        font-size: 3em;
+        transition: 1s;
+        cursor: pointer;
+        text-align: center;
+        &:hover{
+            color: gold;
+        }
+    }
+
+}
+
+
+.usersList{
+
+    h3{
+        justify-content: center;
+
+        border-bottom: 2px double gold;
+        font-size: 2em;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        height: 80%;
+        li{
+            min-height: 60px;
+            padding: 5px;
+            width: 80%;
+            font-size: 1.4em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            transition: color .4s;
+            border-radius: 100px;
+            overflow: hidden;
+            &::before{
+                border-radius: 50px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: rgb(41, 39, 27);
+                z-index: -2;
+                left: -80%;
+                transition: .3s;
+                content: '';
+            }
+            &:hover::before{
+                left: 0;
+            }
+            &:hover{
+                color: gold;
+            }
+        
+            img{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+
+            .userListButton{
+                transform: translateY(3px);                
+            }
+        }
+    }
+}
+
+
+.listEditor{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .rulesBox{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        span{
+            background-color: black;
+            border-radius: 4px;
+            padding: 5px;
+     
+        }
+        flex: 1;
+    }
+    .listTextArea{
+        flex: 3;
+        resize: none;
+        background-color: black;
+        color: gold;
+        padding: 9px;
+        outline: none;
+        border: none;
+        line-height: 24px;
+        letter-spacing: .08em;
+    }
+
+    .back{
+        margin-bottom: 5px;
+        cursor: pointer;
+        &:hover{
+            color: gold;
+        }
+    }
+
+    button{
+        padding: 14px;
+        margin-top: 2px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: .3s;
+
+        &:hover{
+            color: gold;
+        }
+    }
+
+}
+
+.santaListCreator{
+ 
+    .letter{
+        cursor: pointer;
+        resize: none;
+        background-color: rgba(0, 0, 0, 0.707);
+        color: gold;
+        border: 2px solid gold;
+        padding: 9px;
+        line-height: 24px;
+        letter-spacing: .08em;
+        height: 100%;
+        transition: .2s;
+        border-radius: 5px;
+        text-wrap: wrap;
+        &:hover{
+       
+            .EditButton{
+                opacity: 1;
+            }
+        }
+
+        .EditButton{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            >*{
+                font-size: 5em;
+            }
+            color: white;
+            opacity: 0;
+        }
+    }
+}
+
+
+@keyframes animShow {
+    0%{
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+
+    50%{
+        opacity: .5;
+        transform: translateX(0);
+
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.show{
+ animation: animShow .5s alternate;
+}
+
+.userLetterWrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+
+}
+.userLetterButton{
+    &:hover{
+        color: gold;
+    }
+    cursor: pointer;
+}
+.userLetter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    height: 80%;
+    width: 80%;
+    padding-top: 10px;
+
+
+    .signUserWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+    }
+ 
+
+    .letterContent{
+        width: 80%;
+        padding: 5px;
     }
 }
