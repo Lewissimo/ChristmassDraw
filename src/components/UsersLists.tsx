@@ -3,18 +3,17 @@ import User from './User'
 import './components.scss'
 import UserLetter from './UserLetter'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { StateContext } from './BoardState';
+import { StateContext } from './context/BoardState';
 
 const UsersLists = () => {
   const state = useContext(StateContext);
-  const types = state.statesUser;
-  console.log(state.userTools.state)
+  const types = state?.StatesUser;
   return (
     <div className='usersList'>
 
 
       {
-        state.userTools.state === types.initial 
+        state?.userTools.state === types?.initial 
         ?
 
 
@@ -40,8 +39,8 @@ const UsersLists = () => {
         </>
         :
         <div className='userLetterWrapper'>
-          <span className='userLetterButton' onClick={()=>{state.userTools.set(types.initial)}}><ArrowBackIosNewIcon /></span>
-          <UserLetter className='show'/>
+          <span className='userLetterButton' onClick={()=>{state?.userTools.set(types?.initial as string)}}><ArrowBackIosNewIcon /></span>
+          <UserLetter />
         </div>
         } 
     </div>

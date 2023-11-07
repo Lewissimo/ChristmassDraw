@@ -4,13 +4,13 @@ import './components.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faGifts } from '@fortawesome/free-solid-svg-icons';
-import { StateContext } from './BoardState';
+import { StateContext } from './context/BoardState';
 
 const YourPerson = () => {
   const state = useContext(StateContext);
-  const types = state.statesUser;
+  const types = state?.StatesUser;
   return (
-    <div className='yourPerson' onClick={()=>{state.userTools.set(types.letter)}}>
+    <div className='yourPerson' onClick={()=>{state?.userTools.set(types?.letter as string)}}>
       <div className='cardContainer'>
         <div className='card'>
           <div className='front'>
