@@ -10,12 +10,11 @@ import SantaList from '../components/SantaList';
 import UsersLists from '../components/UsersLists';
 const HomeMobile = () => {
   return (
-    <div>
+    <div className='homeMobile'>
     <Swiper
         onSlideChange={()=>{
             console.log('safsda');
         }}
-        className='box-form-swiper'
         modules={[ Pagination, A11y]}
         spaceBetween={50}
         slidesPerView={1}

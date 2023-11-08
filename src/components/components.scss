@@ -221,6 +221,8 @@
         border: none;
         line-height: 24px;
         letter-spacing: .08em;
+        word-wrap: break-word;
+
     }
 
     .back{
@@ -327,7 +329,7 @@
     width: 80%;
     padding-top: 10px;
 
-
+    
     .signUserWrapper{
         display: flex;
         flex-direction: column;
@@ -345,5 +347,10 @@
     .letterContent{
         width: 80%;
         padding: 5px;
+        pre{
+
+            word-wrap: break-word;
+        }
+
     }
 }

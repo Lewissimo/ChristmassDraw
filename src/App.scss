@@ -9,20 +9,44 @@
   align-items: center;
   justify-content: center;
   color: white;
+  .navigationSpace{
+    position: absolute;
+    top: 6px;
+    justify-content: center;
+    text-align: center;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    font-size: .7em;
+  }  
+
+  @keyframes increase {
+    from{
+      width: 200px;
+      height: 300px;
+    }    
+    to{
+      width: 80%;
+      height: 80vh;
+    }
+  }
   .content{
-    width: 250px;
-    height: 450px;
     background-color: #020910e8;
     border-radius: 125px;
     transition: 2s;
+ 
     // &:hover{
-      width: 80%;
-      height: 80vh;
+      // width: 80%;
+      // height: 80vh;
+
     // }
+    position: relative;
 
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+  
   }
   .mainForm{
     form{
@@ -53,7 +77,13 @@
     }
   }
 
-
+  pre {
+    white-space: pre-wrap;       /* Since CSS 2.1 */
+    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
 
   // home
   .home{
@@ -68,10 +98,50 @@
     height: 100%;
     >*{
       width: 30%;
+      
     }
   }
 
+  .homeMobile{
+    .mainCard{
+      height: 50vh;
+      
+
+    }
+
+  }
+
 }
+
+@media screen and (max-width: 400px){
+  .content{
+    min-width: 100%;
+    .mainCard{
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+
+      .userLetterWrapper{
+        flex-direction: column-reverse;
+        font-size: .9em;
+      }
+      .userLetter{
+        width: 100%;
+        .letterContent{
+          width: 100%;
+          pre{
+            padding: 2px;
+          }
+        }
+      }
+      .dayZeroContent{
+        font-size: 1em;
+      }
+    }     
+  }
+}
+
+
 
 ::-webkit-scrollbar {
   width: 6px;

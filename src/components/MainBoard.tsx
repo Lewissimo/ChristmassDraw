@@ -7,7 +7,7 @@ import { StateContext } from './context/BoardState'
 const MainBoard = () => {
 
   return (
-    <div className='mainBoard'>
+    <div className='mainBoard mainCard'>
       <Clock />
       <YourPerson/>
     </div>

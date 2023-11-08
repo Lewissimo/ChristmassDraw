@@ -13,7 +13,7 @@ const SantaList = () => {
 
   const types = state?.SantaLetter;
   return (
-    <div className='santaListCreator'>
+    <div className='santaListCreator mainCard'>
       {state?.letterPageTools.state ===  types?.letterEditor ? 
       (<ChristmassListEditor />)
       :

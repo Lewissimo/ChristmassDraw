@@ -9,7 +9,7 @@ const UsersLists = () => {
   const state = useContext(StateContext);
   const types = state?.StatesUser;
   return (
-    <div className='usersList'>
+    <div className='usersList mainCard'>
 
 
       {
