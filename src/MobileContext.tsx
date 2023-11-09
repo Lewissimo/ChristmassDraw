@@ -26,7 +26,6 @@ const MobileContextApp = ({children}: {children: ReactNode}) => {
     window.onresize = ()=>{
       if(window.innerWidth < 850){
         setIsMobile(true);
-  
       }
       else{
         setIsMobile(false);

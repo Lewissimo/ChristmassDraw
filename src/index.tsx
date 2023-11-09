@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import MobileContextApp from './MobileContext';
 import {AuthContextProvider} from './authContext/AuthContext';
+import DbContextProvider from './databaseContext/DbContext';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
@@ -13,7 +14,9 @@ root.render(
 
   <AuthContextProvider>
     <MobileContextApp>
+      <DbContextProvider>
         <App />
+      </DbContextProvider>
     </MobileContextApp>
   </AuthContextProvider>
   // </React.StrictMode>

@@ -4,9 +4,12 @@ import './components.scss'
 import UserLetter from './UserLetter'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { StateContext } from './context/BoardState';
+import { DBContext } from '../databaseContext/DbContext';
 
 const UsersLists = () => {
   const state = useContext(StateContext);
+  const dbData = useContext(DBContext);
+
   const types = state?.StatesUser;
   return (
     <div className='usersList mainCard'>
@@ -22,19 +25,9 @@ const UsersLists = () => {
         <>
         <h3>Użytkownicy</h3>
         <ul>
-            
-            <User />
-            <User />
-            <User />
-            <User />
-            <User />
-            <User />
-            <User />
-            <User />
-            <User />
-            <User />
-            <User />
-            <User />
+            {dbData?.usersTab.map((element, index)=>{
+              return <User element={element}/>
+            })}
         </ul> 
         </>
         :

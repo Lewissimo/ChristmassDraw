@@ -3,11 +3,12 @@ import './components.scss'
 import ChristmassListEditor from './ChristmassListEditor';
 import BoardState, { StateContext } from './context/BoardState';
 import EditIcon from '@mui/icons-material/Edit';
+import { DBContext } from '../databaseContext/DbContext';
 const SantaList = () => {
   const state = useContext(StateContext);
+  const dbData = useContext(DBContext);
 
-  const santaListText =  
-``;
+  const santaListText = dbData?.current_user.letter;
   
 
 

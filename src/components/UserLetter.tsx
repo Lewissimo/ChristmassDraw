@@ -1,24 +1,32 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import User from './User'
 import img from '../assets/kamil.jpg'
 import './components.scss'
+import { StateContext } from './context/BoardState'
+import { getAbsolutePhotoURL } from '../databaseContext/DbContext'
 const UserLetter = () => {
-    const letterContent = 
-`Drogi święty Mikołaju!
 
-W tym roku chciałbym dostać:
+  const state = useContext(StateContext);
+  const user = state?.userTools.user;
+  const [photoAURL, setPhotoAURL] = useState<string>('');
+  useEffect(()=>{
+    const fetchPhotoURL = async () => {
+      if(user){
+        const absoluteURL = await getAbsolutePhotoURL(user.photoURL);
+        setPhotoAURL(absoluteURL);
+      }
+    };
 
-chleb
-masło
-kubek`
+    fetchPhotoURL();
+})
   return (
     <div className='userLetter show'>
         <div className='signUserWrapper'>
-            <img src={img} alt='' />   
-            <span>Kamil Lewiński</span>
+            <img src={photoAURL} alt='' />   
+            <span>{user?.name}</span>
         </div>
         <div className='letterContent'>
-            <pre>{letterContent}</pre>
+            <pre>{user?.letter}</pre>
         </div>
     </div>
   )
