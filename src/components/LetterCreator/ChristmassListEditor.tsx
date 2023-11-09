@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { StateContext} from './context/BoardState';
-import { DBContext } from '../databaseContext/DbContext';
+import { StateContext} from '../../context/homeVaulesContext/BoardState';
+import { DBContext } from '../../context/databaseContext/DbContext';
 import { collection, doc, updateDoc } from 'firebase/firestore';
-import { db } from '../firebase/firebase';
+import { db } from '../../firebase/firebase';
 const ChristmassListEditor = () => {
     const state = useContext(StateContext);
     const types = state?.SantaLetter;

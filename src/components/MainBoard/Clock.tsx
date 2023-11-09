@@ -1,5 +1,4 @@
 import React from 'react'
-import './components.scss'
 import { Timestamp } from "firebase/firestore";
 
 

@@ -1,12 +1,12 @@
 import { useContext, useEffect, useRef, useState } from 'react';
-import './App.scss';
+import './stylesApp/App.scss';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import { MobileContext, swiperState } from './MobileContext';
+import { MobileContext, swiperState } from './context/MobileContext';
 import { BrowserRouter, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import AuthContext from './authContext/AuthContext';
+import AuthContext from './context/authContext/AuthContext';
 import { width } from '@mui/system';
 
 
@@ -18,21 +18,19 @@ function App() {
 
   const contentRef = useRef<HTMLDivElement | null>(null);
   const ProtectedRoute = ({ children } : {children: any}) => {
-    const isLogged = localStorage.getItem('isLogged');
-    console.log(isLogged);
-    if (!auth?.user && !JSON.parse(isLogged as string)) {
+    if (!auth?.user) {
       
       return <Navigate to="/login" />;
     }
     
 
       if(contentRef.current){
-        contentRef.current.style.width = '200px';
-        contentRef.current.style.height = '300px';
+        // contentRef.current.style.width = '200px';
+        // contentRef.current.style.height = '300px';
   
       }
       if(contentRef.current){
-        contentRef.current.style.animation = '2s increase forwards';
+        // contentRef.current.style.animation = '2s increase forwards';
       }
    
     return children

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import MobileContextApp from './MobileContext';
-import {AuthContextProvider} from './authContext/AuthContext';
-import DbContextProvider from './databaseContext/DbContext';
+import MobileContextApp from './context/MobileContext';
+import {AuthContextProvider} from './context/authContext/AuthContext';
+import DbContextProvider from './context/databaseContext/DbContext';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

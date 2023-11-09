@@ -1,0 +1,49 @@
+@media screen and (max-width: 750px){
+.App{
+
+    
+
+    height: 100vh;
+    width: 100vw;
+    .navigationSpace{
+        z-index: 200;
+        position: absolute;
+    }
+    .content{
+        height: 100vh;
+        min-width: 100vw;
+        border-radius: 0;
+        top: 0;
+        .mainCard{
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            
+            .userLetterWrapper{
+                flex-direction: column-reverse;
+                font-size: .9em;
+            }
+            .userLetter{
+                width: 100%;
+                .letterContent{
+                    width: 100%;
+                    pre{
+                        padding: 2px;
+                    }
+                }
+            }
+            .dayZeroContent{
+                font-size: 1em;
+            }
+        }     
+    }
+
+
+
+
+
+
+
+}
+}
+  

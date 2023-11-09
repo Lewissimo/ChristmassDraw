@@ -1,8 +1,7 @@
 import React from 'react'
-import MainBoard from '../components/MainBoard'
-import SantaList from '../components/SantaList'
-import UsersLists from '../components/UsersLists'
-import '../App.scss';
+import MainBoard from '../components/MainBoard/MainBoard'
+import SantaList from '../components/LetterCreator/SantaList'
+import UsersLists from '../components/UsersList/UsersLists'
 
 const HomeComp = () => {
   return (

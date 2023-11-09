@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
-import './components.scss'
+import '../../stylesApp/components.scss'
 import ChristmassListEditor from './ChristmassListEditor';
-import BoardState, { StateContext } from './context/BoardState';
+import BoardState, { StateContext } from '../../context/homeVaulesContext/BoardState';
 import EditIcon from '@mui/icons-material/Edit';
-import { DBContext } from '../databaseContext/DbContext';
+import { DBContext } from '../../context/databaseContext/DbContext';
 const SantaList = () => {
   const state = useContext(StateContext);
   const dbData = useContext(DBContext);

@@ -1,0 +1,32 @@
+@keyframes increase {
+    from{
+      width: 200px;
+      height: 300px;
+    }    
+    to{
+      width: 80%;
+      height: 80vh;
+    }
+  }
+
+  
+
+  @keyframes animShow {
+    0%{
+        opacity: 0;
+        transform: translateX(-30%);
+    }
+
+    50%{
+        opacity: .5;
+        transform: translateX(0);
+
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.show{
+ animation: animShow .5s alternate;
+}

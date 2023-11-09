@@ -5,9 +5,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
-import MainBoard from '../components/MainBoard';
-import SantaList from '../components/SantaList';
-import UsersLists from '../components/UsersLists';
+import MainBoard from '../components/MainBoard/MainBoard';
+import SantaList from '../components/LetterCreator/SantaList';
+import UsersLists from '../components/UsersList/UsersLists';
 const HomeMobile = () => {
   return (
     <div className='homeMobile'>

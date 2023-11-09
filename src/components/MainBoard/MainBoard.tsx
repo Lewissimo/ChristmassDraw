@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
 import Clock from './Clock'
 import YourPerson from './YourPerson'
-import './components.scss'
-import { StateContext } from './context/BoardState'
+import '../../stylesApp/components.scss'
+import { StateContext } from '../../context/homeVaulesContext/BoardState'
 
 const MainBoard = () => {
 

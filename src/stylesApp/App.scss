@@ -1,0 +1,47 @@
+@import './AppHome';
+@import './AppMobile';
+
+
+
+
+// GLOBAL STYLES
+.App{
+  background-image: url(../assets/bg.gif);
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #0066ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #060101;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

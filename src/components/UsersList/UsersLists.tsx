@@ -1,10 +1,10 @@
 import React, { useContext } from 'react'
 import User from './User'
-import './components.scss'
+import '../../stylesApp/components.scss'
 import UserLetter from './UserLetter'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { StateContext } from './context/BoardState';
-import { DBContext } from '../databaseContext/DbContext';
+import { StateContext } from '../../context/homeVaulesContext/BoardState';
+import { DBContext } from '../../context/databaseContext/DbContext';
 
 const UsersLists = () => {
   const state = useContext(StateContext);

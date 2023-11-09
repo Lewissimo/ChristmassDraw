@@ -1,0 +1,160 @@
+.listEditor{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .rulesBox{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        span{
+            background-color: black;
+            border-radius: 4px;
+            padding: 5px;
+     
+        }
+        flex: 1;
+    }
+    .listTextArea{
+        flex: 3;
+        resize: none;
+        background-color: black;
+        color: gold;
+        padding: 9px;
+        outline: none;
+        border: none;
+        line-height: 24px;
+        letter-spacing: .08em;
+        word-wrap: break-word;
+
+    }
+
+    .back{
+        margin-bottom: 5px;
+        cursor: pointer;
+        &:hover{
+            color: gold;
+        }
+    }
+
+    button{
+        padding: 14px;
+        margin-top: 2px;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        border: none;
+        transition: .3s;
+
+        &:hover{
+            color: gold;
+        }
+    }
+
+}
+
+.santaListCreator{
+ 
+    .letter{
+        cursor: pointer;
+        resize: none;
+        background-color: rgba(0, 0, 0, 0.707);
+        color: gold;
+        border: 2px solid gold;
+        padding: 9px;
+        line-height: 24px;
+        letter-spacing: .08em;
+        height: 100%;
+        transition: .2s;
+        border-radius: 5px;
+        text-wrap: wrap;
+        &:hover{
+       
+            .EditButton{
+                opacity: 1;
+            }
+        }
+
+        .EditButton{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            >*{
+                font-size: 5em;
+            }
+            color: white;
+            opacity: 0;
+        }
+    }
+}
+
+
+
+
+.userLetterWrapper{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 100%;
+
+}
+.userLetterButton{
+    &:hover{
+        color: gold;
+    }
+    cursor: pointer;
+}
+.userLetter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    height: 80%;
+    width: 80%;
+    padding-top: 10px;
+
+    
+    .signUserWrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        img{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+    }
+ 
+
+    .letterContent{
+        width: 80%;
+        padding: 5px;
+        pre{
+
+            word-wrap: break-word;
+        }
+
+    }
+}
+
+
+.santaListCreator{
+
+
+    .writeListButton{
+        font-family: handwriten;
+
+        font-size: 3em;
+        transition: 1s;
+        cursor: pointer;
+        text-align: center;
+        &:hover{
+            color: gold;
+        }
+    }
+
+}

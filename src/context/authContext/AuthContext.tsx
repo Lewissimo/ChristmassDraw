@@ -1,6 +1,6 @@
 import React, { ReactNode, createContext, useEffect, useState } from 'react';
 import { User as FirebaseUser, onAuthStateChanged, signInWithEmailAndPassword, AuthError } from "firebase/auth";
-import { auth } from '../firebase/firebase';
+import { auth } from '../../firebase/firebase';
 
 export enum loginReturnedStatesEnum{
   EVERYTHINGCORRECT,

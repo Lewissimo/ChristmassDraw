@@ -3,7 +3,7 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGift } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router';
-import AuthContext, { loginReturnedStatesEnum } from '../authContext/AuthContext';
+import AuthContext, { loginReturnedStatesEnum } from '../context/authContext/AuthContext';
 
 const Login = () => {
     const auth = useContext(AuthContext);

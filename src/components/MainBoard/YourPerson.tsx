@@ -1,15 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react';
-import img from '../assets/kamil.jpg';
-import './components.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGifts } from '@fortawesome/free-solid-svg-icons';
-import { StateContext } from './context/BoardState';
-import { DBContext, getAbsolutePhotoURL, santaUser } from '../databaseContext/DbContext';
+import { StateContext } from '../../context/homeVaulesContext/BoardState';
+import { DBContext, getAbsolutePhotoURL, SantaUser } from '../../context/databaseContext/DbContext';
 
 const YourPerson = () => {
   const state = useContext(StateContext);
   const dbData = useContext(DBContext);
-  const [person, setPerson] = useState<santaUser | null>(null);
+  const [person, setPerson] = useState<SantaUser | null>(null);
   useEffect(() => {
 
     dbData?.usersTab.map(async (element)=>{
@@ -37,7 +35,7 @@ const YourPerson = () => {
       <div className='cardContainer'>
         <div className='card'>
           <div className='front'>
-            <img src={person?.photoURL || img} alt='' />
+            <img src={person?.photoURL} alt='' />
             <span className='name'>{person?.name || 'No person selected'}</span>
           </div>
           <div className='back'>

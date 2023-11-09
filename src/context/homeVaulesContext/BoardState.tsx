@@ -1,5 +1,5 @@
 import React, { createContext, useState, ReactNode } from 'react';
-import { santaUser } from '../../databaseContext/DbContext';
+import { SantaUser } from '../databaseContext/DbContext';
 
 enum StatesUser {
   initial = 'initial',
@@ -14,9 +14,9 @@ enum SantaLetter {
 
 type UserTools = {
   state: string;
-  user: santaUser | null;
+  user: SantaUser | null;
   set: (value: string) => void;
-  setUserLetter: (value: santaUser) => void;
+  setUserLetter: (value: SantaUser) => void;
 };
 
 type LetterPageTools = {
@@ -36,7 +36,7 @@ export const StateContext = createContext<StateContextType | undefined>(undefine
 const BoardState = ({children}: {children: ReactNode}) => {
   const [santaLetterState, setSantaLetterState] = useState(SantaLetter.noletter as string);
   const [userState, setUserState] = useState(StatesUser.initial as string);
-  const [letterString, setLetterString] = useState<santaUser | null>(null);
+  const [letterString, setLetterString] = useState<SantaUser | null>(null);
 
   const values: StateContextType = {
     StatesUser,
@@ -45,7 +45,7 @@ const BoardState = ({children}: {children: ReactNode}) => {
       state: userState,
       user: letterString,
       set: (value: string) => setUserState(value),
-      setUserLetter: (value: santaUser) => setLetterString(value)
+      setUserLetter: (value: SantaUser) => setLetterString(value)
     },
     letterPageTools: {
       state: santaLetterState,

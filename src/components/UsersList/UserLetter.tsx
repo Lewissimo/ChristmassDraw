@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
 import User from './User'
 import img from '../assets/kamil.jpg'
-import './components.scss'
-import { StateContext } from './context/BoardState'
-import { getAbsolutePhotoURL } from '../databaseContext/DbContext'
+import { StateContext } from '../../context/homeVaulesContext/BoardState'
+import { getAbsolutePhotoURL } from '../../context/databaseContext/DbContext'
 const UserLetter = () => {
 
   const state = useContext(StateContext);

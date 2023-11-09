@@ -1,0 +1,72 @@
+.usersList{
+
+    h3{
+        justify-content: center;
+
+        border-bottom: 2px double gold;
+        font-size: 2em;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+
+    ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+        gap: 5px;
+        display: flex;
+        flex-direction: column;
+        overflow: auto;
+        height: 80%;
+        li{
+            min-height: 60px;
+            padding: 5px;
+            width: 80%;
+            font-size: 1.4em;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            z-index: 2;
+            transition: color .4s;
+            border-radius: 100px;
+            overflow: hidden;
+            &::before{
+                border-radius: 50px;
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                background-color: rgb(41, 39, 27);
+                z-index: -2;
+                left: -80%;
+                transition: .3s;
+                content: '';
+            }
+            &:hover::before{
+                left: 0;
+            }
+            &:hover{
+                color: gold;
+            }
+        
+            img{
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+            }
+
+            .userListButton{
+                transform: translateY(3px);                
+            }
+        }
+    }
+}
+
+
