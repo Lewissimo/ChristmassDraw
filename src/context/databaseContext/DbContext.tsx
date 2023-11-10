@@ -13,13 +13,6 @@ export type SantaUser = {
   person: string;
 };
 
-type DbContextType = {
-  current_user: SantaUser;
-  usersTab: SantaUser[];
-  setRefresh: () => void;
-};
-
-
 
 export const DBContext = createContext<DbContextType | undefined>(undefined);
 

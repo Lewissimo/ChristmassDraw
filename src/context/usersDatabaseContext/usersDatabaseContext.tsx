@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode, createContext } from 'react'
 import { userData } from './reducerTypes';
 
 
@@ -8,13 +8,12 @@ type UserContextType = {
     setRefresh: () => void;
 }
 
+export const UserDataContext = createContext<UserContextType | undefined>(undefined);
 
-
-
-const usersDatabaseContext = () => {
+const UsersDatabaseContext = ({children}: {children: ReactNode}) => {
   return (
-    <div>usersDatabaseContext</div>
+    <UserDataContext.Provider>usersDatabaseContext</UserDataContext.Provider>
   )
 }
 
-export default usersDatabaseContext
+export default UsersDatabaseContext
