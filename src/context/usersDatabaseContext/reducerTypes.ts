@@ -1,4 +1,4 @@
-import { ADD_USER, GET_USER } from "./actions";
+import { ADD_USER } from "./actions";
 
 export type userData = {
     id: string;
@@ -9,6 +9,6 @@ export type userData = {
 }
 
 export type actionType = {
-    type: typeof ADD_USER | typeof GET_USER;
-    payload: userData | string
+    type: typeof ADD_USER;
+    payload: userData
 }

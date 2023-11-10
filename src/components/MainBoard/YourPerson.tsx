@@ -2,11 +2,11 @@ import React, { useContext, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGifts } from '@fortawesome/free-solid-svg-icons';
 import { StateContext } from '../../context/homeVaulesContext/BoardState';
-import { DBContext, getAbsolutePhotoURL, SantaUser } from '../../context/databaseContext/DbContext';
+import { getAbsolutePhotoURL } from '../../context/functions';
+
 
 const YourPerson = () => {
   const state = useContext(StateContext);
-  const dbData = useContext(DBContext);
   const [person, setPerson] = useState<SantaUser | null>(null);
   useEffect(() => {
 

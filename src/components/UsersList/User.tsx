@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react'
-import img from '../assets/kamil.jpg'
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { StateContext } from '../../context/homeVaulesContext/BoardState';
-import { getAbsolutePhotoURL, SantaUser } from '../../context/databaseContext/DbContext';
+import { SantaUser } from '../../context/databaseContext/DbContext';
+import { getAbsolutePhotoURL } from '../../context/functions';
 
 
 const User = ({element} : {element: SantaUser}) => {

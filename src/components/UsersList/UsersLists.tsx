@@ -1,14 +1,14 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import User from './User'
 import '../../stylesApp/components.scss'
 import UserLetter from './UserLetter'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { StateContext } from '../../context/homeVaulesContext/BoardState';
-import { DBContext } from '../../context/databaseContext/DbContext';
+import { UserDataContext } from '../../context/usersDatabaseContext/usersDatabaseContext';
 
 const UsersLists = () => {
   const state = useContext(StateContext);
-  const dbData = useContext(DBContext);
+  const usersData = useContext(UserDataContext);
 
   const types = state?.StatesUser;
   return (
@@ -25,7 +25,7 @@ const UsersLists = () => {
         <>
         <h3>Użytkownicy</h3>
         <ul>
-            {dbData?.usersTab.map((element, index)=>{
+            {usersData?.usersTab.map((element, index)=>{
               return <User element={element}/>
             })}
         </ul> 
