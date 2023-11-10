@@ -19,16 +19,7 @@ type DbContextType = {
   setRefresh: () => void;
 };
 
-export const getAbsolutePhotoURL = async (url: string): Promise<string> => {
-  const storageRef = ref(storage, url);
-  try {
-    const downloadURL = await getDownloadURL(storageRef);
-    return downloadURL;
-  } catch (error) {
-    console.error("Błąd podczas pobierania URL z Firebase Storage:", error);
-    throw error;
-  }
-};
+
 
 export const DBContext = createContext<DbContextType | undefined>(undefined);
 
