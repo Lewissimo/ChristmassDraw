@@ -1,5 +1,4 @@
-import { ADD_USER } from "./actions"
-import { actionType, userData } from "./reducerTypes"
+import { ADD_USER, actionType, userData } from "./actions"
 
 export const initialState = [] as userData[]
 

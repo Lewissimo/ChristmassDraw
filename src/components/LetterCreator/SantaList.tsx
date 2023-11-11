@@ -1,29 +1,29 @@
 import React, { useContext } from 'react'
 import '../../stylesApp/components.scss'
 import ChristmassListEditor from './ChristmassListEditor';
-import BoardState, { StateContext } from '../../context/homeVaulesContext/BoardState';
 import EditIcon from '@mui/icons-material/Edit';
-import { DBContext } from '../../context/databaseContext/DbContext';
+import { ManageContentContext } from '../../context/elementsOnBoardContext/ElementsOnBoardContext';
+import { UserDataContext } from '../../context/usersDatabaseContext/UsersDatabaseContext';
+import { manageMainContentEnum } from '../../context/elementsOnBoardContext/actions';
 const SantaList = () => {
-  const state = useContext(StateContext);
-  const dbData = useContext(DBContext);
-
+  const state = useContext(ManageContentContext);
+  const dbData = useContext(UserDataContext);
+  
   const santaListText = dbData?.current_user.letter;
   
 
 
-  const types = state?.SantaLetter;
   return (
     <div className='santaListCreator mainCard'>
-      {state?.letterPageTools.state ===  types?.letterEditor ? 
+      {state?.letterCreator === manageMainContentEnum.LETTER_EDITOR ? 
       (<ChristmassListEditor />)
       :
       
       santaListText === ''
        ? 
-       <p className='writeListButton' onClick={()=>{state?.letterPageTools.set(types?.letterEditor as string)}}>Napisz list do Świętego Mikołaja</p>
+       <p className='writeListButton' onClick={()=>{state?.setState(manageMainContentEnum.LETTER_EDITOR)}}>Napisz list do Świętego Mikołaja</p>
         : 
-        <div className='letter' onClick={()=>{state?.letterPageTools.set(types?.letterEditor as string)}}><pre>{santaListText}</pre><div className='EditButton'><EditIcon /></div></div>
+        <div className='letter' onClick={()=>{state?.setState(manageMainContentEnum.LETTER_EDITOR)}}><pre>{santaListText}</pre><div className='EditButton'><EditIcon /></div></div>
       }
       
     </div>

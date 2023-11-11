@@ -30,7 +30,16 @@ const MobileContextApp = ({children}: {children: ReactNode}) => {
       else{
         setIsMobile(false);
       }
-    }  
+    }
+    
+    useEffect(()=>{
+      if(window.innerWidth < 850){
+        setIsMobile(true);
+      }
+      else{
+        setIsMobile(false);
+      }
+    }, []);
     
   const value = {
     isMobile,

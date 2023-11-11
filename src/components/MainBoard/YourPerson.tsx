@@ -1,13 +1,17 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGifts } from '@fortawesome/free-solid-svg-icons';
-import { StateContext } from '../../context/homeVaulesContext/BoardState';
 import { getAbsolutePhotoURL } from '../../context/functions';
+import { ManageContentContext } from '../../context/elementsOnBoardContext/ElementsOnBoardContext';
+import { UserDataContext } from '../../context/usersDatabaseContext/UsersDatabaseContext';
+import { userData } from '../../context/usersDatabaseContext/actions';
+import { manageMainContentEnum } from '../../context/elementsOnBoardContext/actions';
 
 
 const YourPerson = () => {
-  const state = useContext(StateContext);
-  const [person, setPerson] = useState<SantaUser | null>(null);
+  const state = useContext(ManageContentContext);
+  const dbData = useContext(UserDataContext);
+  const [person, setPerson] = useState<userData | null>(null);
   useEffect(() => {
 
     dbData?.usersTab.map(async (element)=>{
@@ -28,10 +32,14 @@ const YourPerson = () => {
 
 
 
-  const types = state?.StatesUser; 
 
   return (
-    <div className='yourPerson' onClick={() => { state?.userTools.set(types?.letter as string) }}>
+<>    
+    <div className='yourPerson' onClick={async () => { 
+     await state?.setState(person as userData);
+      state?.setState(manageMainContentEnum.USER_LETTER);
+      
+      }}>
       <div className='cardContainer'>
         <div className='card'>
           <div className='front'>
@@ -44,6 +52,7 @@ const YourPerson = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

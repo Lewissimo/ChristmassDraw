@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { StateContext } from '../../context/homeVaulesContext/BoardState'
 import { getAbsolutePhotoURL } from '../../context/functions'
+import { ManageContentContext } from '../../context/elementsOnBoardContext/ElementsOnBoardContext';
 const UserLetter = () => {
 
-  const state = useContext(StateContext);
-  const user = state?.userTools.user;
+  const state = useContext(ManageContentContext);
+  const user = state?.user;
   const [photoAURL, setPhotoAURL] = useState<string>('');
   useEffect(()=>{
     const fetchPhotoURL = async () => {
@@ -15,7 +15,7 @@ const UserLetter = () => {
     };
 
     fetchPhotoURL();
-})
+}, []);
   return (
     <div className='userLetter show'>
         <div className='signUserWrapper'>

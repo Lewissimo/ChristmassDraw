@@ -3,39 +3,45 @@ import User from './User'
 import '../../stylesApp/components.scss'
 import UserLetter from './UserLetter'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { StateContext } from '../../context/homeVaulesContext/BoardState';
-import { UserDataContext } from '../../context/usersDatabaseContext/usersDatabaseContext';
+import { UserDataContext } from '../../context/usersDatabaseContext/UsersDatabaseContext';
+import { ManageContentContext } from '../../context/elementsOnBoardContext/ElementsOnBoardContext';
+import { manageMainContentEnum } from '../../context/elementsOnBoardContext/actions';
 
 const UsersLists = () => {
-  const state = useContext(StateContext);
+  const state = useContext(ManageContentContext);
   const usersData = useContext(UserDataContext);
 
-  const types = state?.StatesUser;
-  return (
-    <div className='usersList mainCard'>
+  console.log(usersData);
+  const [content, setContent] = useState<any>();
+  
 
-
-      {
-        state?.userTools.state === types?.initial 
-        ?
-
-
-
-
+  useEffect(()=>{
+    if (state?.usersList === manageMainContentEnum.USER_LIST) {
+      setContent(
         <>
-        <h3>Użytkownicy</h3>
-        <ul>
-            {usersData?.usersTab.map((element, index)=>{
-              return <User element={element}/>
-            })}
-        </ul> 
+          <h3>Użytkownicy</h3>
+          <ul>
+            {usersData?.usersTab.map((element, index) => (
+              <User element={element} key={index} />
+            ))}
+          </ul>
         </>
-        :
+      );
+    } else if (state?.usersList === manageMainContentEnum.USER_LETTER) {
+      setContent(
         <div className='userLetterWrapper'>
-          <span className='userLetterButton' onClick={()=>{state?.userTools.set(types?.initial as string)}}><ArrowBackIosNewIcon /></span>
+          <span className='userLetterButton' onClick={() => state.setState(manageMainContentEnum.USER_LIST)}>
+            <ArrowBackIosNewIcon />
+          </span>
           <UserLetter />
         </div>
-        } 
+      );
+    }
+  }, [state]);
+
+  return (
+    <div className='usersList mainCard'>
+      {content} 
     </div>
   )
 }
