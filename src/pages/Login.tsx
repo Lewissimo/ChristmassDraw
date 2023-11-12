@@ -10,6 +10,13 @@ const Login = () => {
     const [loadingLogin, setLoadingLogin] = useState(false);
     const navigate = useNavigate();
 
+    const handleFocus = () => {
+      document.body.style.touchAction = 'none';
+    };
+  
+    const handleBlur = () => {
+      document.body.style.touchAction = 'auto';
+    };
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -28,7 +35,6 @@ const Login = () => {
             }
           }
        );
-      
       }
 
 
@@ -37,11 +43,11 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
             <label>
                 <span>Login</span>
-                <input type='text' required maxLength={20} />
+                <input type='text' required maxLength={20} onFocus={handleFocus} onBlur={handleBlur} />
             </label>
             <label>
                 <span>Hasło</span>                
-                <input type="password" required maxLength={20} />
+                <input type="password" required maxLength={20} onFocus={handleFocus} onBlur={handleBlur} />
             </label>
             <button type='submit'>{loadingLogin ? <FontAwesomeIcon icon={faGift} spin size='2xl' /> : <ArrowForwardIosIcon />}</button>
         </form>

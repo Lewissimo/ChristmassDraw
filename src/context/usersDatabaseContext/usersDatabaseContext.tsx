@@ -48,7 +48,6 @@ const UsersDatabaseContextProvider = ({children}: {children: ReactNode}) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            console.log('in');
             await getUsersData();
             console.log(value); // Wartość jest teraz aktualna
         };

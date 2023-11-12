@@ -1,5 +1,5 @@
 
-
+@import './animation';
 
 
 
@@ -12,20 +12,33 @@
     display: flex;
     align-items: center;
     font-size: .7em;
+    color: black;
+    width: 100%;
   }  
 
+  .messageSwiper{
+    width: 120px;
+  }
 
   .content{
-    background-color: #020910e8;
-    border-radius: 125px;
+    background-color: #3a3b3c49;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid gold;
     transition: 2s;
     position: relative;
-
+    height: 80vh;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  
+    
+    .mainCard{
+      opacity: 0;
+      @extend %showContent;
+    
+    }
   }
   .mainForm{
     form{
@@ -33,7 +46,6 @@
       gap: 5px;
       width: 250px;
       height: 450px;
-
       border-radius: 125px;
       display: flex;
       flex-direction: column;

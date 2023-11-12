@@ -24,7 +24,7 @@ const User = ({element} : {element: userData}) => {
   return (
     <li className='user' onClick={()=>{
       state?.setState(manageMainContentEnum.USER_LETTER);
-      state?.setState(element);
+      state?.setUser(element);
     
     }}>
       <img src={photoAURL} alt='' />

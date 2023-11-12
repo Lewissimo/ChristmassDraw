@@ -36,7 +36,7 @@ const YourPerson = () => {
   return (
 <>    
     <div className='yourPerson' onClick={async () => { 
-     await state?.setState(person as userData);
+     await state?.setUser(person as userData);
       state?.setState(manageMainContentEnum.USER_LETTER);
       
       }}>
@@ -56,4 +56,4 @@ const YourPerson = () => {
   );
 };
 
-export default YourPerson;
+export default React.memo(YourPerson);

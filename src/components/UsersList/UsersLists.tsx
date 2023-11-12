@@ -11,11 +11,12 @@ const UsersLists = () => {
   const state = useContext(ManageContentContext);
   const usersData = useContext(UserDataContext);
 
-  console.log(usersData);
+  console.log(state);
   const [content, setContent] = useState<any>();
   
 
   useEffect(()=>{
+    console.log(state);
     if (state?.usersList === manageMainContentEnum.USER_LIST) {
       setContent(
         <>
@@ -37,7 +38,7 @@ const UsersLists = () => {
         </div>
       );
     }
-  }, [state]);
+  }, [state, usersData]);
 
   return (
     <div className='usersList mainCard'>

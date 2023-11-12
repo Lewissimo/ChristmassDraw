@@ -1,7 +1,9 @@
 import { userData } from "../usersDatabaseContext/actions";
 
 export const SET_STATE = 'SET_STATE';
-export const SET_LETTER = 'SET_LETTER';
+// export const SET_LETTER = 'SET_LETTER';
+export const SET_USER = 'SET_USER';
+
 
 
 export interface Set_State{
@@ -11,17 +13,20 @@ export interface Set_State{
 
 
 export interface Set_Letter{
-    type: typeof SET_LETTER;
+    type: typeof SET_USER;
     payload: userData;
 }
 
-const set_state = (value: manageMainContentEnum): Set_State => ({
+
+
+
+export const set_state = (value: manageMainContentEnum): Set_State => ({
     type: SET_STATE,
     payload: value
 })
 
-const set_letter = (value: userData): Set_Letter => ({
-    type: SET_LETTER,
+export const set_user = (value: userData): Set_Letter => ({
+    type: SET_USER,
     payload: value
 })
 

@@ -6,12 +6,13 @@
 
 // GLOBAL STYLES
 .App{
-  background-image: url(../assets/bg.gif);
+  background-image: url(../assets/bg2.jpg);
   background-position: center;
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: contain;
-  background-color: #0066ff;
+  background-size: 100% auto;
+  background-color: hsl(0, 0%, 100%);
+  background-position-y: -200px;
   display: flex;
   align-items: center;
   justify-content: center;

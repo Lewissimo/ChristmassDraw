@@ -30,3 +30,17 @@
 .show{
  animation: animShow .5s alternate;
 }
+
+@keyframes showContentAnim {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+  
+}
+
+%showContent{
+  animation: showContentAnim .7s 2s forwards;
+}

@@ -1,5 +1,5 @@
 import { userData } from "../usersDatabaseContext/actions";
-import { ActionType, ManageContextTypeState, SET_LETTER, SET_STATE, Set_State, manageMainContentEnum } from "./actions";
+import { ActionType, ManageContextTypeState, SET_STATE, SET_USER, manageMainContentEnum } from "./actions";
 
 
 
@@ -22,10 +22,10 @@ export const elementsOnBoardReducer: React.Reducer<ManageContextTypeState, Actio
             }else{
                 return {
                     ...state,
-                    usersList: state.usersList as manageMainContentEnum,
+                    usersList: action.payload as manageMainContentEnum,
                 };
             }
-        case SET_LETTER:
+        case SET_USER:
             return {...state, user: action.payload as userData};
         default:
             console.log('something went wrong');
