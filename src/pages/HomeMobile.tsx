@@ -34,10 +34,10 @@ const HomeMobile = () => {
           
           switch(activeIndex){
             case 0:
-              setMessage('Napisz swój list');
+              setMessage('Kliknij prezent');
               break;
             case 1:
-              setMessage('Kliknij na prezencij i sprawdź kogo masz');
+              setMessage('Napisz swój list');
               break;
               case 2:
                 setMessage('Użytkownicy');
@@ -66,7 +66,7 @@ const HomeMobile = () => {
           modules={[ Pagination, A11y]}
         spaceBetween={50}
         slidesPerView={1}
-        initialSlide={2}
+        initialSlide={0}
         direction="horizontal"
         onSwiper={(swiper: any) => {setSwiper(swiper)}}
         

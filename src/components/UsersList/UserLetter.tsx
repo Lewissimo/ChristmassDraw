@@ -22,9 +22,14 @@ const UserLetter = () => {
             <img src={photoAURL} alt='' />   
             <span>{user?.name}</span>
         </div>
+        {user?.letter !== '' ? 
         <div className='letterContent'>
             <pre>{user?.letter}</pre>
         </div>
+       :
+       <div className='letterContent'>Ten użytkonik nie ma jeszcze listu</div> 
+      
+       }
     </div>
   )
 }
