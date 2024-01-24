@@ -31,6 +31,7 @@ If you click on the caption in the center, you can write your Santa letter, whic
 <img width="455" alt="Screenshot 2024-01-24 at 22 41 52" src="https://github.com/Lewissimo/ChristmassDraw/assets/61652256/57119540-3ffe-4400-b843-6fe4e7cc3daf">
 <br />
 <img width="455" alt="Screenshot 2024-01-24 at 22 42 17" src="https://github.com/Lewissimo/ChristmassDraw/assets/61652256/533fa3b8-9093-45ca-9b76-c990ee2ffa1d">
+<br />
 If you finish writing your Christmas gift, you can save it and edit it when you click on the letter again
 <img width="525" alt="Screenshot 2024-01-24 at 22 44 01" src="https://github.com/Lewissimo/ChristmassDraw/assets/61652256/8d6c777f-5c83-4da8-8dcf-6371ede1dde8">
 <img width="525" alt="Screenshot 2024-01-24 at 22 44 19" src="https://github.com/Lewissimo/ChristmassDraw/assets/61652256/0e20c538-8b33-4169-b7ca-87e4baade1c7">
