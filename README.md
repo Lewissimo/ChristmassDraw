@@ -21,6 +21,17 @@ Each one of us prepared a letter to Santa, and each one of us drew one person to
 Then, I had the idea that it would be perfect to have our own space to provide all the features needed for this event.
 
 
+
+# How does it work?
+
+
+<img width="1200" alt="Screenshot 2024-01-24 at 22 34 45" src="https://github.com/Lewissimo/ChristmassDraw/assets/61652256/bef1ed02-0e29-40f3-9aee-2722d04e9ad5">
+
+
+
+
+
+
 ##Structure
 Project of christmassDraw is devided into two components UsersApp and AdminApp
 
