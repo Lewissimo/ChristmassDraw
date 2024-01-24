@@ -15,10 +15,10 @@ Feel free to adjust the language based on the tone and style you prefer for your
 
 
 ## Project assumptions
-# I started this project in response to my family's needs. I'm one of 6 siblings, and the tradition of having many children is popular in my family.
-# A few years ago, we decided that everyone would draw one person and give one gift because buying gifts for every single member of my family was a really expensive undertaking.
-# Each one of us prepared a letter to Santa, and each one of us drew one person to give a gift to.
-# Then, I had the idea that it would be perfect to have our own space to provide all the features needed for this event.
+I started this project in response to my family's needs. I'm one of 6 siblings, and the tradition of having many children is popular in my family.
+A few years ago, we decided that everyone would draw one person and give one gift because buying gifts for every single member of my family was a really expensive undertaking.
+Each one of us prepared a letter to Santa, and each one of us drew one person to give a gift to.
+Then, I had the idea that it would be perfect to have our own space to provide all the features needed for this event.
 
 ## How does it work?
 # Classic login page
