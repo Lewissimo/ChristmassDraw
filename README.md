@@ -1,5 +1,12 @@
 ### ChristmassDraw
 
+# MENU
+
+
+- [Sekcja 1](#Structure)
+- [Sekcja 2](#sekcja-2)
+- [Sekcja 3](#sekcja-3)
+
 
 Welcome to our festive app that adds an extra sprinkle of joy to your holiday season! 🎅✨
 
@@ -35,8 +42,10 @@ If you click on the caption in the center, you can write your Santa letter, whic
 If you finish writing your Christmas gift, you can save it and edit it when you click on the letter again
 <img width="525" alt="Screenshot 2024-01-24 at 22 44 01" src="https://github.com/Lewissimo/ChristmassDraw/assets/61652256/8d6c777f-5c83-4da8-8dcf-6371ede1dde8">
 <img width="525" alt="Screenshot 2024-01-24 at 22 44 19" src="https://github.com/Lewissimo/ChristmassDraw/assets/61652256/0e20c538-8b33-4169-b7ca-87e4baade1c7">
+<br />
 The app has a complete responsive design
 <img width="489" alt="Screenshot 2024-01-24 at 22 49 02" src="https://github.com/Lewissimo/ChristmassDraw/assets/61652256/4e15fcd2-d7f6-4246-b1d8-4ad75bf91a16">
+<br />
 On the mobile version, you can simply swipe through the pages
 
 
