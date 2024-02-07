@@ -3,7 +3,7 @@ import { Timestamp } from "firebase/firestore";
 
 
 const Clock = () => {
-
+  // zaimplementuj to samo z jakąś biblioteką 
   const isLeapYear = (year: number) => {
     return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
   }

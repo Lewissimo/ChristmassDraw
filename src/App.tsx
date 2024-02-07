@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import './stylesApp/App.scss';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import { MobileContext, swiperState } from './context/MobileContext';
+import { MobileContext, swiperState } from './context/MobileContext'; //usun nieuzywane importy
 import { BrowserRouter, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import AuthContext from './context/authContext/AuthContext';
 import { width } from '@mui/system';
@@ -12,8 +12,8 @@ function App() {
   const auth = useContext(AuthContext);
  
 
-  const contentRef = useRef<HTMLDivElement | null>(null);
-  const ProtectedRoute = ({ children } : {children: any}) => {
+  const contentRef = useRef<HTMLDivElement | null>(null); //nieuzywane
+  const ProtectedRoute = ({ children } : {children: any}) => { // children: any zamień na poprawny typ
     if (!auth?.user) {
       
       return <Navigate to="/login" />;

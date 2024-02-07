@@ -10,7 +10,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  // <React.StrictMode>
+  <React.StrictMode>
   <AuthContextProvider>
       <ManageContentContextProvider>
         <MobileContextApp>
@@ -18,8 +18,10 @@ root.render(
         </MobileContextApp>
       </ManageContentContextProvider>
   </AuthContextProvider>
-  // </React.StrictMode>
+  </React.StrictMode>
 );
+
+// mozesz usunac reportWebVitals() jezeli nie uzywasz 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

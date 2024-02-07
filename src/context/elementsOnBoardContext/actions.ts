@@ -30,7 +30,7 @@ export const set_user = (value: userData): Set_Letter => ({
     payload: value
 })
 
-export enum manageMainContentEnum{
+export enum manageMainContentEnum{ // enum nie potrzebny prawdopodobnie
     CURRENT_USER_HAS_LETTER,
     CURRENT_USER_DOESNT_HAS_LETTER,
     LETTER_EDITOR,
