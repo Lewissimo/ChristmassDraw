@@ -11,7 +11,8 @@ const Login = () => {
     const navigate = useNavigate();
 
     const handleFocus = () => {
-      document.body.style.touchAction = 'none';
+      document.body.style.touchAction = 'none'; // zamiast trikow z document.body.style.touchAction = 'none'; możesz zrobić css'em tak żeby strona logowania wypełniała przeglądarkę na 100%, wtedy nie będzie się przesuwać
+
     };
   
     const handleBlur = () => {
@@ -23,7 +24,7 @@ const Login = () => {
         setLoadingLogin(true);
       // first element is fieldset thats why I've started colect elemets from 1 not from 0
         const form = e.target as HTMLFormElement;
-        const mail = form[0] as HTMLInputElement;
+        const mail = form[0] as HTMLInputElement; // uzyj state'ów do trzymania informacji z formularza
         const password = form[1] as HTMLInputElement;
         console.log(password);
 
@@ -43,7 +44,7 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
             <label>
                 <span>Login</span>
-                <input type='text' required maxLength={20} onFocus={handleFocus} onBlur={handleBlur} />
+                <input type='text' required maxLength={20} onFocus={handleFocus} onBlur={handleBlur} /> 
             </label>
             <label>
                 <span>Hasło</span>                

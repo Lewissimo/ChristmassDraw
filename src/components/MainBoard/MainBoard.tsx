@@ -13,4 +13,4 @@ const MainBoard = () => {
   )
 }
 
-export default React.memo(MainBoard);
+export default React.memo(MainBoard); // React.memo do usuniecia

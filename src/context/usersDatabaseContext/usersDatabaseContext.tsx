@@ -15,7 +15,7 @@ export const UserDataContext = createContext<UserContextType | undefined>(undefi
 const UsersDatabaseContextProvider = ({children}: {children: ReactNode}) => {
     const auth = useContext(AuthContext);
 
-    const [state, dispatch] = useReducer(usersDatabaseReducer, initialState);
+    const [_, dispatch] = useReducer(usersDatabaseReducer, initialState); // state jest nieuzuwany, mozesz dac zamiast niego _, tak sie robi jak chcesz ominac jakas wartosc ktorej nie bedziesz potrzebowac: const [_, dispatch] 
     const [value, setValue] = useState<UserContextType | undefined>(undefined);
 
     const getUsersData = async () => {
@@ -30,7 +30,7 @@ const UsersDatabaseContextProvider = ({children}: {children: ReactNode}) => {
                     photoURL: doc.data().photoURL
                 };
 
-                dispatch(add_user(user));
+                dispatch(add_user(user)); // ten add_user(user) dużo nie daje, wystarczy tu dać {type: ADD_USER, payload: user}
                 return user;
             });
 
@@ -49,7 +49,7 @@ const UsersDatabaseContextProvider = ({children}: {children: ReactNode}) => {
     useEffect(() => {
         const fetchData = async () => {
             await getUsersData();
-            console.log(value); // Wartość jest teraz aktualna
+            console.log(value); // Wartość jest teraz aktualna // jak wysylasz juz ten project w CV to pousuwaj console logi i komentarze dawaj po angielsku
         };
         fetchData();
     }, []);

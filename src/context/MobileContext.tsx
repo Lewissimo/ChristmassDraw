@@ -39,7 +39,7 @@ const MobileContextApp = ({children}: {children: ReactNode}) => {
       else{
         setIsMobile(false);
       }
-    }, []);
+    }, []); // tu mozesz dac [window.innerWidth] i usunac wyzej funkcje window.onresize, chyba powinno dzialac tak samo
     
   const value = {
     isMobile,
