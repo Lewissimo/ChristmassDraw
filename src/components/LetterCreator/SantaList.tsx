@@ -3,7 +3,7 @@ import '../../stylesApp/components.scss'
 import ChristmassListEditor from './ChristmassListEditor';
 import EditIcon from '@mui/icons-material/Edit';
 import { ManageContentContext } from '../../context/elementsOnBoardContext/ElementsOnBoardContext';
-import { UserDataContext } from '../../context/usersDatabaseContext/UsersDatabaseContext';
+import { UserDataContext } from '../../context/usersDatabaseContext/UserDBContext';
 import { manageMainContentEnum } from '../../context/elementsOnBoardContext/actions';
 const SantaList = () => {
   const state = useContext(ManageContentContext);

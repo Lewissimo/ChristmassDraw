@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import HomeComp from './HomeComp'
 import HomeMobile from './HomeMobile'
 import { MobileContext } from '../context/MobileContext'
-import UsersDatabaseContextProvider from '../context/usersDatabaseContext/UsersDatabaseContext'
+import UsersDatabaseContextProvider from '../context/usersDatabaseContext/UserDBContext'
 const Home = () => {
   const MobileState = useContext(MobileContext);
 

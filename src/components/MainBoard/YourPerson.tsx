@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGifts } from '@fortawesome/free-solid-svg-icons';
 import { getAbsolutePhotoURL } from '../../context/functions';
 import { ManageContentContext } from '../../context/elementsOnBoardContext/ElementsOnBoardContext';
-import { UserDataContext } from '../../context/usersDatabaseContext/UsersDatabaseContext';
+import { UserDataContext } from '../../context/usersDatabaseContext/UserDBContext';
 import { userData } from '../../context/usersDatabaseContext/actions';
 import { manageMainContentEnum } from '../../context/elementsOnBoardContext/actions';
 

@@ -3,7 +3,7 @@ import User from './User'
 import '../../stylesApp/components.scss'
 import UserLetter from './UserLetter'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-import { UserDataContext } from '../../context/usersDatabaseContext/UsersDatabaseContext';
+import { UserDataContext } from '../../context/usersDatabaseContext/UserDBContext';
 import { ManageContentContext } from '../../context/elementsOnBoardContext/ElementsOnBoardContext';
 import { manageMainContentEnum } from '../../context/elementsOnBoardContext/actions';
 

@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import { collection, doc, updateDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
-import { UserDataContext } from '../../context/usersDatabaseContext/UsersDatabaseContext';
+import { UserDataContext } from '../../context/usersDatabaseContext/UserDBContext';
 import { manageMainContentEnum } from '../../context/elementsOnBoardContext/actions';
 import { ManageContentContext } from '../../context/elementsOnBoardContext/ElementsOnBoardContext';
 const ChristmassListEditor = () => {
