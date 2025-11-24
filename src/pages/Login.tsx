@@ -27,7 +27,7 @@ const Login = () => {
         const password = form[1] as HTMLInputElement;
         console.log(password);
 
-        const res = await auth?.signIn(`${mail.value}@pla.pla`, password.value).then((res)=>{
+        const res = await auth?.signIn(`${mail.value}@pl.pl`, password.value).then((res)=>{
           setLoadingLogin(false);
           console.log(res);
             if (res === loginReturnedStatesEnum.EVERYTHINGCORRECT) {

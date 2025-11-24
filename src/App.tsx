@@ -2,10 +2,8 @@ import { useContext, useEffect, useRef, useState } from 'react';
 import './stylesApp/App.scss';
 import Home from './pages/Home';
 import Login from './pages/Login';
-import { MobileContext, swiperState } from './context/MobileContext';
 import { BrowserRouter, Route, Routes, Navigate, useNavigate } from 'react-router-dom';
 import AuthContext from './context/authContext/AuthContext';
-import { width } from '@mui/system';
 
 
 function App() {
